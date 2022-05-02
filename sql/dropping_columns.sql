@@ -1,0 +1,6 @@
+ALTER TABLE name_basics 
+DROP COLUMN person_role,
+DROP COLUMN code1,
+DROP COLUMN code2,
+DROP COLUMN code3,
+DROP COLUMN code4;
