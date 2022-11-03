@@ -1,0 +1,41 @@
+version : "3.8"
+services:
+  wordpress: 
+    image: wordpress:latest
+    depends_on:
+      - db
+    ports:
+      - "80:80"
+    restart : always
+    environment : 
+      WORDPRESS_DB_HOST : db:3306
+      WORDPRESS_DB_USER : berkayuser
+      WORDPRESS_DB_PASSWORD : berkaytest
+      WORDPRESS_DB_NAME : berkaydb
+    volumes:
+      - wordpress:/var/www/html
+    networks:
+      - wpnet
+
+  db:
+    image: mysql:5.7
+    platform: linux/x86_64 #This is for M1 Chips.
+    restart : always
+    environment : 
+      MYSQL_DATABASE : berkaydb
+      MYSQL_USER : berkayuser
+      MYSQL_PASSWORD : berkaytest
+      MYSQL_ROOT_PASSWORD : "1"
+    volumes:
+      - database:/var/lib/mysql
+    networks:
+      - wpnet
+
+volumes:
+ wordpress:
+ database:
+
+networks:
+  wpnet:
+    driver: bridge
+
