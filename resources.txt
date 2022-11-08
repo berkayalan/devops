@@ -1,0 +1,13 @@
+These are the resources I use when I'm learning MLOPS:
+
+- Youtube playlist that I have created: https://youtube.com/playlist?list=PLbN9zh4jn1Pzt296YgWuac_YQ5oabG2b4
+
+- Oreilly Introducing MLOPS book.
+
+- Astronomer for Airflow : https://academy.astronomer.io/astronomer-certification-apache-airflow-fundamentals-preparation/723538
+
+- GPU resource : https://studiolab.sagemaker.aws/login
+
+- Articles for beginnnig : https://medium.com/@berkayalann/list/mlops-6cd5e4c00f9e
+
+- AWS courses : https://www.udemy.com/course/aws-certified-cloud-practitioner-new/learn/lecture/20208142#overview and https://explore.skillbuilder.aws/learn/lp/97/data-analytics-learning-plan
