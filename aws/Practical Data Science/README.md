@@ -1,0 +1,1 @@
+This repository contains materials of the Practical Data Science on the AWS Cloud Specialization on Coursera. You can have a look [here](https://www.coursera.org/specializations/practical-data-science).
