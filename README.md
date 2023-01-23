@@ -10,3 +10,5 @@ Mlops Codes in different technologies
 - Airflow
 
 - Bash
+
+- Git
