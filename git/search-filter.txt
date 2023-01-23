@@ -1,0 +1,25 @@
+We can filter git logs with different dimensions:
+
+- by date : --before / --after
+
+	git log --after="2023-1-23"
+
+	git log --after="2022-11-23" --before="2022-12-1"
+
+- by message : --grep
+
+	git log --grep="refactor"
+
+- by author : --author
+
+	git log --author="Michael Boyna"
+
+- by file : --<filename>
+
+	git log -- README.md
+
+- by branch : <branch-A>
+
+	git log branch-A
+
+	git log feature/login..main
