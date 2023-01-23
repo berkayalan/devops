@@ -1,0 +1,3 @@
+We can use submodules in order to clone a repository inside the repo.
+
+	git submodule add repo-link
