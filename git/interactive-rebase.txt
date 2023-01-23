@@ -1,0 +1,13 @@
+Interactive rebase can help us to change commit messages we wrote in the past.
+
+# First we need to look the logs:
+
+	git log --oneline
+
+# Then we should decide how many steps do we want to go back and then rebase to it.
+
+	git rebase -i HEAD~3
+
+# Then an editor window will be opened and we can manipulate the message by adding "reword" keyword. After saving the file, we can change the message in the second file opened. Save and close it.
+
+# When we check logs again, we can see the changes we did.
