@@ -1,0 +1,14 @@
+[2023-02-18T18:49:14.929+0000] {processor.py:154} INFO - Started process (PID=43) to work on /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/tutorial.py
+[2023-02-18T18:49:14.958+0000] {processor.py:756} INFO - Processing file /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/tutorial.py for tasks to queue
+[2023-02-18T18:49:14.960+0000] {logging_mixin.py:137} INFO - [2023-02-18T18:49:14.960+0000] {dagbag.py:537} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/tutorial.py
+[2023-02-18T18:49:14.979+0000] {processor.py:766} INFO - DAG(s) dict_keys(['tutorial']) retrieved from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/tutorial.py
+[2023-02-18T18:49:15.020+0000] {logging_mixin.py:137} INFO - [2023-02-18T18:49:15.020+0000] {dag.py:2585} INFO - Sync 1 DAGs
+[2023-02-18T18:49:15.043+0000] {logging_mixin.py:137} INFO - [2023-02-18T18:49:15.043+0000] {dag.py:3340} INFO - Setting next_dagrun for tutorial to 2023-02-17T18:49:15.043081+00:00, run_after=2023-02-18T18:49:15.043081+00:00
+[2023-02-18T18:49:15.072+0000] {processor.py:176} INFO - Processing /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/tutorial.py took 0.147 seconds
+[2023-02-18T18:49:45.890+0000] {processor.py:154} INFO - Started process (PID=106) to work on /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/tutorial.py
+[2023-02-18T18:49:45.893+0000] {processor.py:756} INFO - Processing file /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/tutorial.py for tasks to queue
+[2023-02-18T18:49:45.894+0000] {logging_mixin.py:137} INFO - [2023-02-18T18:49:45.894+0000] {dagbag.py:537} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/tutorial.py
+[2023-02-18T18:49:45.906+0000] {processor.py:766} INFO - DAG(s) dict_keys(['tutorial']) retrieved from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/tutorial.py
+[2023-02-18T18:49:45.935+0000] {logging_mixin.py:137} INFO - [2023-02-18T18:49:45.935+0000] {dag.py:2585} INFO - Sync 1 DAGs
+[2023-02-18T18:49:45.951+0000] {logging_mixin.py:137} INFO - [2023-02-18T18:49:45.951+0000] {dag.py:3340} INFO - Setting next_dagrun for tutorial to 2023-02-17T18:49:45.951327+00:00, run_after=2023-02-18T18:49:45.951327+00:00
+[2023-02-18T18:49:45.966+0000] {processor.py:176} INFO - Processing /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/tutorial.py took 0.078 seconds
