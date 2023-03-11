@@ -12,3 +12,5 @@ Mlops Codes in different technologies
 - Bash
 
 - Git
+
+- Logging
