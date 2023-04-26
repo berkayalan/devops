@@ -1,0 +1,8 @@
+
+# ECR Login Command
+
+aws ecr get-login-password --region region | docker login --username AWS --password-stdin aws_account_id.dkr.ecr.region.amazonaws.com
+
+# Docker Push
+
+docker push aws_account_id.dkr.ecr.region.amazonaws.com/demo:latest
