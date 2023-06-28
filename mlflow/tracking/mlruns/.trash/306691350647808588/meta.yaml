@@ -1,0 +1,7 @@
+artifact_location: file:///Users/berkayalan/Desktop/Data%20Science/16%20-%20MLOps/mlflow/mlruns/306691350647808588
+creation_time: 1687940207834
+experiment_id: '306691350647808588'
+last_update_time: 1687940383142
+lifecycle_stage: deleted
+name: diabetes_classifier_v0
+tags: {}

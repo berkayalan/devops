@@ -1,0 +1,16 @@
+artifact_uri: mlflow-artifacts:/0/423547aa952346e99cc5d42f9886860e/artifacts
+deleted_time: 1687939936195
+end_time: 1687939880482
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: 423547aa952346e99cc5d42f9886860e
+run_name: dashing-fawn-239
+run_uuid: 423547aa952346e99cc5d42f9886860e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1687939878718
+status: 4
+tags: []
+user_id: berkayalan

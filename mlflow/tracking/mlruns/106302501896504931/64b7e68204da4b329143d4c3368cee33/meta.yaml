@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/berkayalan/Desktop/Data%20Science/16%20-%20MLOps/mlflow/mlruns/106302501896504931/64b7e68204da4b329143d4c3368cee33/artifacts
+end_time: 1687940401859
+entry_point_name: ''
+experiment_id: '106302501896504931'
+lifecycle_stage: active
+run_id: 64b7e68204da4b329143d4c3368cee33
+run_name: diabetes_classifier_v0.1.0
+run_uuid: 64b7e68204da4b329143d4c3368cee33
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1687940400188
+status: 3
+tags: []
+user_id: berkayalan

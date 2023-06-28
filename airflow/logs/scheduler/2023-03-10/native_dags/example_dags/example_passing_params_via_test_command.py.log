@@ -509,3 +509,10 @@
 [2023-03-10T20:27:25.698+0000] {logging_mixin.py:137} INFO - [2023-03-10T20:27:25.698+0000] {dag.py:2585} INFO - Sync 1 DAGs
 [2023-03-10T20:27:25.716+0000] {logging_mixin.py:137} INFO - [2023-03-10T20:27:25.716+0000] {dag.py:3340} INFO - Setting next_dagrun for example_passing_params_via_test_command to 2023-03-10T20:26:00+00:00, run_after=2023-03-10T20:27:00+00:00
 [2023-03-10T20:27:25.730+0000] {processor.py:176} INFO - Processing /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_passing_params_via_test_command.py took 0.086 seconds
+[2023-03-10T20:27:56.453+0000] {processor.py:154} INFO - Started process (PID=4607) to work on /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_passing_params_via_test_command.py
+[2023-03-10T20:27:56.456+0000] {processor.py:756} INFO - Processing file /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_passing_params_via_test_command.py for tasks to queue
+[2023-03-10T20:27:56.459+0000] {logging_mixin.py:137} INFO - [2023-03-10T20:27:56.458+0000] {dagbag.py:537} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_passing_params_via_test_command.py
+[2023-03-10T20:27:56.479+0000] {processor.py:766} INFO - DAG(s) dict_keys(['example_passing_params_via_test_command']) retrieved from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_passing_params_via_test_command.py
+[2023-03-10T20:27:56.507+0000] {logging_mixin.py:137} INFO - [2023-03-10T20:27:56.507+0000] {dag.py:2585} INFO - Sync 1 DAGs
+[2023-03-10T20:27:56.525+0000] {logging_mixin.py:137} INFO - [2023-03-10T20:27:56.525+0000] {dag.py:3340} INFO - Setting next_dagrun for example_passing_params_via_test_command to 2023-03-10T20:26:00+00:00, run_after=2023-03-10T20:27:00+00:00
+[2023-03-10T20:27:56.540+0000] {processor.py:176} INFO - Processing /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_passing_params_via_test_command.py took 0.092 seconds

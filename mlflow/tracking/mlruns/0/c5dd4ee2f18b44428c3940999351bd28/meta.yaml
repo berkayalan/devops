@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/c5dd4ee2f18b44428c3940999351bd28/artifacts
+end_time: 1687940207975
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: c5dd4ee2f18b44428c3940999351bd28
+run_name: diabetes_classifier_v0.1.0
+run_uuid: c5dd4ee2f18b44428c3940999351bd28
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1687940207824
+status: 4
+tags: []
+user_id: berkayalan
