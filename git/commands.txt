@@ -1,0 +1,11 @@
+git switch : changes the branch.
+
+git stash : holds uncommittet changes.
+
+git checkout <commit hash> : goes back to the commit but we need to create a new branch here.
+
+git reset <commit hash>:The git reset command is used to undo the changes in your working directory and get back to a specific commit while discarding all the commits made after that one. 
+
+git reset --hard : delete old commits.
+
+git revert <commit hash to revert>: git revert inverts the changes introduced by the original commit by creating a new commit with the underlying inverse content.  
