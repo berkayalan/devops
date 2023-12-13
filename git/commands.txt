@@ -9,3 +9,14 @@ git reset <commit hash>:The git reset command is used to undo the changes in you
 git reset --hard : delete old commits.
 
 git revert <commit hash to revert>: git revert inverts the changes introduced by the original commit by creating a new commit with the underlying inverse content.  
+
+We can configure an individual repo to use a specific user / email address 
+which overrides the global configuration. From the root of the repo, run
+
+    git config user.name "Your Name Here"
+    git config user.email your@email.com
+
+whereas the default user / email is configured in our ~/.gitconfig
+
+    git config --global user.name "Your Name Here"
+    git config --global user.email your@email.com
