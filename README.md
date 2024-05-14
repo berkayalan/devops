@@ -1,11 +1,14 @@
-# MLOps
-Mlops Codes in different technologies
+# Devops
+
+Notes and codes in different technologies
 
 - AWS
 
 - SQL
 
 - Docker
+
+- Kubernetes
 
 - Airflow
 
