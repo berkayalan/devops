@@ -1,0 +1,7 @@
+This is the essential comments for kubernetes.
+
+
+- minikube start/stop
+- kubectl get notes/deployments
+- minikube dashboard
+- kubectl delete deployment --all --namespace=default
