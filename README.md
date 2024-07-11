@@ -22,4 +22,6 @@ Notes and codes in different technologies
 
 - ClearML
 
+- tmux
+
 - terraform

@@ -10,7 +10,17 @@ tmux is a terminal multiplexer. It lets you switch easily between several progra
 
 - ctrl + b and 1(or name) ----> Goes first window
 
-- tmux ls ----> lists all sessions
+- ctrl + b and p ----> Goes previous window
+
+- ctrl + b and n ----> Goes next window
+
+- ctrl + b and w ----> Lists all windows
+
+- tmux ls ----> lists all windows
+
+- tmux new -s <new-session-name> ----> Creates new session
+
+- tmux list-sessions ----> lists all sessions
 
 - ctrl + b and , ----> renames current window
 
@@ -20,3 +30,10 @@ tmux is a terminal multiplexer. It lets you switch easily between several progra
 
 - tmux attach -t <session-name> ----> attaches the session
 
+
+
+## Resources
+
+- https://danielmiessler.com/p/tmux/
+
+- https://gist.github.com/michaellihs/b6d46fa460fa5e429ea7ee5ff8794b96
