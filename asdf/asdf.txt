@@ -1,0 +1,35 @@
+asdf is a powerful tool for managing multiple versions of programming languages and runtime environments. 
+It allows you to easily switch between different versions of software, such as Python, Node.js, Ruby, and more. 
+
+## Install
+
+brew install asdf
+
+## Plugins
+
+asdf plugin-add <language>
+asdf plugin-add terraform
+asdf plugin-list-all
+
+## List all available versions
+
+asdf list-all terraform
+
+## Install Versions
+
+asdf install nodejs 16.14.0
+
+## Set Global and Local Versions
+
+asdf global nodejs 16.14.0
+asdf local python 3.10.5
+
+## Check Installed versions
+
+asdf list terraform
+asdf list 
+
+## Remove Installed Versions
+
+asdf uninstall nodejs 16.14.0
+
