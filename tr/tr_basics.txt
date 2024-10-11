@@ -1,0 +1,27 @@
+The tr command is a UNIX command-line utility for translating or deleting characters. It supports a range of transformations including uppercase to lowercase, squeezing repeating characters, deleting specific characters, and basic find and replace. It can be used with UNIX pipes to support more complex translation. tr stands for translate. 
+
+- cat filename | tr [a-z] [A-Z] --------> converts all characters uppercase
+
+- cat filename | tr [:lower:] [:upper:] ---------> converts all characters uppercase
+
+- echo "This is Berkay Alan" | tr "[:space:]" "\t" --------> translates white-spaces to tabs
+
+- tr "{}" "()" <filename -------> translates braces into paranthesis
+
+- echo "Thiiiiis iiiiiis Berkay Alan" | tr -s "i" ------> squeeze a sequence of repetitive characters using -s option
+
+- echo "Heiiillo Fromeiiii Beirkay Alaniii | tr -d i -------> deletes specified characters with -d option
+
+- echo "hello world" | tr  " " "_" ------> replace spesific characters
+
+- echo "hello world" | tr -d "aeiou" -----> remove all vowels
+
+- echo "Phone: 123-456-7890" | tr "0-9" "X" ------> converts digits to X
+
+- echo "hello 123 world" | tr 'a-z' 'A-Z' | tr -d '0-9' ------> translates to uppercase and delete the digits
+
+- -d ------> delete characters
+
+- -s ------> squeeze repeated characters
+
+- -c ------> complement the set
