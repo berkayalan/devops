@@ -8,6 +8,8 @@ tmux is a terminal multiplexer. It lets you switch easily between several progra
 
 - ctrl + b and c ----> Creates new window 
 
+- ctrl + b and & ----> kills a window
+
 - ctrl + b and 1(or name) ----> Goes first window
 
 - ctrl + b and p ----> Goes previous window
