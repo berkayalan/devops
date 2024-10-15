@@ -25,3 +25,7 @@ Notes and codes in different technologies
 - tmux
 
 - terraform
+
+- tr
+
+- sed

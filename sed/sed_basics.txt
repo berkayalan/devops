@@ -1,0 +1,51 @@
+The SED (Stream Editor) command in Unix/Linux is a powerful utility used to process and manipulate text in files. It can perform a variety of operations such as searching, find-and-replace, insertion, deletion, and more, without the need to open the file in an editor. 
+
+## Commonly Used Options
+
+-i >>>>> Edit the file in place without printing to the console (overwrite the file).
+
+-n >>>>> Suppress automatic printing of lines.
+
+-e >>>>> Allows multiple commands to be executed.
+
+-f >>>>> Reads sed commands from a file instead of the command line.
+
+-r >>>>> Enables extended regular expressions.
+
+## Use Cases
+
+1. Replacing or substituing strings
+
+sed 's/old/new/' file.txt >>>> This only replaces the first occurence of the word on each line.
+
+sed 's/old/new/g' file.txt >>>> This replaces all occurences of the word with -g global keyword.
+
+sed -i 's/old/new/g' file.txt >>>> This replaces all occurences in the file without printing.
+
+2. Delete Lines
+
+sed '2d' file.txt >>>> This deletes second line from the file.
+
+echo -e "apple\nbanana\ncherry" | sed '/banana/d' >>>> This deletes all the lines that match the pattern.
+
+3. Insert or Append Text
+
+sed '3i\This is a new line' file.txt >>>> Insert a line before third line.
+
+sed '3a\This is a new line' file.txt >>>> Insert a line after third line.        
+
+4. Print spesific lines
+
+sed -n '/pattern/p' file.txt >>>> This only prints the lines that match the pattern.
+
+sed -n '1,3p' file.txt >>>> This only prints certain lines.
+
+5. Delete blank lines
+
+sed '/^$/d' file.txt >>>> Remove all empty lines.
+
+6. Replace a pattern in a spesific line range  
+
+sed '3,5s/foo/bar/' file.txt >>>> This replaces "foo" with "bar" in lines 3 to 5 only.
+
+                                                                                    
