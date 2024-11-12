@@ -32,6 +32,7 @@ tmux is a terminal multiplexer. It lets you switch easily between several progra
 
 - tmux attach -t <session-name> ----> attaches the session
 
+- ctrl +b and x ----> kills the current pane
 
 
 ## Resources
