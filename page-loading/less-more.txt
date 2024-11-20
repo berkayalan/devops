@@ -1,0 +1,20 @@
+- less >>>> it allows backward and forward navigation.
+
+
+command | less
+
+nettacker --show-all-modules | less
+
+echo "a long text here" | less
+
+
+- more >>>> Only allows forward navigation (less flexible than less).
+
+command | more
+
+more output.txt
+
+- man as a pager >>>> We can use man as a makeshift pager by creating a temporary file.
+
+command | man less
+
