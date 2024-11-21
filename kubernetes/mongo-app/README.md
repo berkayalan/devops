@@ -2,6 +2,10 @@
 
 This project demonstrates how to deploy a MongoDB database and a Mongo-Express interface using Kubernetes on a local environment powered by Minikube. It includes resources such as Deployments, ConfigMaps, Secrets, and Services.
 
+## Architectute
+
+![Architecture](mongo-app.png)
+
 ## Features
 
 MongoDB Deployment: Persistent database storage for your application.
