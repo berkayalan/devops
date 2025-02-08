@@ -1,0 +1,20 @@
+jq is a lightweight and flexible command-line JSON processor akin to sed,awk,grep, and friends for JSON data. 
+It's written in portable C and has zero runtime dependencies, allowing you to easily slice, filter, map
+and transform structured data.
+
+You can install jq with brew install jq command.
+
+jq is built around the concept of filters that work over a stream of JSON. Each filter takes an 
+input and emits JSON to standard out. As we’re going to see, there are many predefined filters 
+that we can use. We can effortlessly combine these filters using pipes to quickly construct and 
+apply complex operations and transformations to our JSON data.
+
+- Prettify json -----> echo '{"Capitals":{"Turkey":"Ankara","Germany":"Berlin","Austria":"Vienna"}}' | jq '.'
+
+- Prettify json file -----> jq '.' capitals.json
+
+- Access Properties -----> echo '{"Capitals":{"Turkey":"Ankara","Germany":"Berlin","Austria":"Vienna"},
+                            "Teams":{"Galatasaray":"Turkey","Bayern Munich":"Germany","Rapid Wien":"Austria"}  }' | jq '.Teams'
+
+- Access value in Properties -----> echo '{"Capitals":{"Turkey":"Ankara","Germany":"Berlin","Austria":"Vienna"},
+                            "Teams":{"Galatasaray":"Turkey","Bayern Munich":"Germany","Rapid Wien":"Austria"}  }' | jq '.Teams.Galatasaray'
