@@ -1,0 +1,17 @@
+[
+    {
+      "name": "Austria",
+      "capital": "Vienna",
+      "population": 9132000
+    },
+    {
+      "name": "Germany",
+      "capital": "Berlin",
+      "population": 84048000
+    },
+    {
+      "name": "Turkey",
+      "capital": "Ankara",
+      "population": 85033000
+      }
+  ]

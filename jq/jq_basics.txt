@@ -18,3 +18,38 @@ apply complex operations and transformations to our JSON data.
 
 - Access value in Properties -----> echo '{"Capitals":{"Turkey":"Ankara","Germany":"Berlin","Austria":"Vienna"},
                             "Teams":{"Galatasaray":"Turkey","Bayern Munich":"Germany","Rapid Wien":"Austria"}  }' | jq '.Teams.Galatasaray'
+
+**Note:** Note that if one of the properties has spaces or special characters, we need to wrap the property name in quotes when accessing it from the jq command:
+echo '{ "capital city": "Berlin" }' | jq '."capital city"'
+
+- Iterate over Array -----> echo '["Vienna","Graz","Salzburg"]' | jq ".[]"    
+
+- Extract values over Array -----> jq '.[] | .name' capitals.json
+
+- Accessinng by index -----> jq '.[1].name ' capitals.json 
+
+- Slicing an array ----->  echo '[1,2,3,4,5,6,7,8,9,10]' | jq '.[6:9]'
+
+- Getting Keys -----> echo '{"Capitals":{"Turkey":"Ankara","Germany":"Berlin","Austria":"Vienna"}}' | jq '.Capitals | keys'
+
+- Getting Length -----> echo '{"Capitals":{"Turkey":"Ankara","Germany":"Berlin","Austria":"Vienna"}}' | jq '.Capitals | length'
+
+- Mapping Values with has function -----> jq 'map(has("name"))' capitals.json 
+
+- Mapping Values -----> jq 'map(.population+100)' capitals.json 
+
+- Finding minimum in an array -----> jq '[.[].population] | min' capitals.json
+
+- Finding maximum in an array -----> jq '[.[].population] | max' capitals.json
+
+- Filtering values with select -----> jq '.[] | select(.population > 84048000)' capitals.json
+
+- Filtering values with select -----> jq '.[] | select(.capital > " Berlin")' capitals.json
+
+
+
+## Resources
+
+- https://www.baeldung.com/linux/jq-command-json
+
+- https://github.com/jqlang/jq
