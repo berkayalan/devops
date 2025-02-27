@@ -33,14 +33,51 @@ exit
 EOF
 }
 
+create_spesific_table() {
+    local table_name="$1"
+    mongosh "mongodb://localhost:27017" \
+        --username mongodb \
+        --password mongodb \
+        --authenticationDatabase admin <<EOF
+show dbs
+use ${table_name}
+db.${table_name}.insertOne(
+  {
+    title: "The Favourite",
+    genres: [ "Drama", "History" ],
+    runtime: 121,
+    rated: "R"
+  }
+)
+show dbs
+exit
+EOF
+}
+
+delete_spesific_table() {
+    local table_name="$1"
+    mongosh "mongodb://localhost:27017" \
+        --username mongodb \
+        --password mongodb \
+        --authenticationDatabase admin <<EOF
+show dbs
+use ${table_name}
+db.dropDatabase("${table_name}")
+show dbs
+exit
+EOF
+}
+
 
 usage () {
-  echo "Usage: $0  <action>"
-  echo "    action = start|stop|create_table"
+  echo "Usage: $0  <action><table_name>"
+  echo "    action = start|stop|create_table|create_spesific_table|delete_spesific_table"
+  echo "    table_name (optional) = <table name you want to create or delete>"
   exit 1
 }
 
 ACTION=$1
+TABLE_NAME=$2
 
 case $ACTION in 
   start) 
@@ -49,6 +86,21 @@ case $ACTION in
     stop_mongo;;
   create_table)  
     create_table;;
+  create_spesific_table)
+    if [ -z "$TABLE_NAME" ]; then
+      echo "Error: You must provide a table name for create_spesific_table."
+      usage
+    else
+      create_spesific_table "$TABLE_NAME"
+    fi
+    ;;
+  delete_spesific_table)
+    if [ -z "$TABLE_NAME" ]; then
+      echo "Error: You must provide a table name for delete_spesific_table."
+      usage
+    else
+      delete_spesific_table "$TABLE_NAME"
+    fi
+    ;;
   *) usage;;
 esac
- 
