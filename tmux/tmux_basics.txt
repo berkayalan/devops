@@ -34,6 +34,18 @@ tmux is a terminal multiplexer. It lets you switch easily between several progra
 
 - tmux attach -t <session-name> ----> attaches the session
 
+- tmux list-keys ----> show current bindings
+
+- tmux show-options -s ----> show current server options
+
+- tmux show-options -g  ----> show current global session options
+
+- tmux show-options ----> show current session options
+
+- tmux show-options -gw  ----> show current global window options
+
+- tmux show-options -w  ----> show current window options
+
 
 ## Resources
 
