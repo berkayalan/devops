@@ -13,13 +13,13 @@ asdf plugin-list-all
 
 ## List all available versions
 
-asdf list-all terraform
+asdf list all terraform
 
 ## Install Versions
 
 asdf install nodejs 16.14.0
 
-## Set Global and Local Versions
+## Set Global and Local Current Versions
 
 asdf global nodejs 16.14.0
 asdf local python 3.10.5
