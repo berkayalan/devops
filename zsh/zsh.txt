@@ -1,0 +1,6 @@
+## How to add an alias?
+
+1. Open zshrc file with: vim ~/.zshrc
+2. Add your alias: tgp='terragrunt plan --tf-forward-stdout' 
+3. Reload your zshrc: source ~/.zshrc 
+4. Check all the alias: alias
