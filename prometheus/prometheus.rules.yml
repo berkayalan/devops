@@ -4,3 +4,25 @@ groups:
     rules:
       - record: instance:cpu_usage:rate5m
         expr: rate(process_cpu_seconds_total[5m])
+
+  - name: high-request-alerting
+    interval: 30s
+    rules:
+    - alert: HighRequestLatency
+      expr: job:request_latency_seconds:mean5m{job="myjob"} > 0.5
+      for: 2m
+      keep_firing_for: 5m
+      labels:
+        team: production
+      annotations:
+        summary: High request latency
+
+  - name: test-alerts
+    rules:
+      - alert: TestAlert
+        expr: vector(1)  # Always true
+        for: 5s
+        labels:
+          severity: critical
+        annotations:
+          summary: "This is a test alert"
