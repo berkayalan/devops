@@ -1,0 +1,6 @@
+groups:
+  - name: cpu-usage-over
+    interval: 30s
+    rules:
+      - record: instance:cpu_usage:rate5m
+        expr: rate(process_cpu_seconds_total[5m])
