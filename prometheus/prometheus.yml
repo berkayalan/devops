@@ -25,3 +25,6 @@ alerting:
   alertmanagers:
     - static_configs:
         - targets: ["alertmanager:9093"]
+      basic_auth:
+        username: admin
+        password: <Your real password>

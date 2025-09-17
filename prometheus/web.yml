@@ -1,0 +1,4 @@
+basic_auth_users:
+  admin: $2y$12$5wBmU478DM50qcWcevYh1.yGYKgS7fWmReQyi.dLLS0bm45a8U3Q2
+  user1: $2y$12$ctJ8lGQ7zWyruB47UwcTaeT4M7sdmiWwgMw51Vr44D7mwPrM.bKDC
+  monitoring: $2y$12$4mQ/wAI5TPP2bH0c4HF1eOmabEpxRAg4G.WWxvcK0gb/u4pWjRdxq

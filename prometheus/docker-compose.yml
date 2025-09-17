@@ -20,8 +20,10 @@ services:
     container_name: alertmanager
     volumes:
       - ./alertmanager.yml:/etc/alertmanager/alertmanager.yml
+      - ./web.yml:/etc/alertmanager/web.yml
     command:
       - "--config.file=/etc/alertmanager/alertmanager.yml"
+      - "--web.config.file=/etc/alertmanager/web.yml"
       - "--web.listen-address=:9093"
     ports:
       - "9093:9093"
