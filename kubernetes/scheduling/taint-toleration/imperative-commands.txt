@@ -1,0 +1,9 @@
+Taint a Node
+
+kubectl taint nodes node01 spray=mortein:NoSchedule
+
+Untaint a Node
+
+kubectl taint nodes node01 spray=mortein:NoSchedule-
+
+
