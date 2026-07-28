@@ -1,1 +1,0 @@
-kubectl label nodes mynode size=Large
