@@ -1,0 +1,24 @@
+---
+
+- name: Provision S3 Bucket
+  hosts: localhost
+  connection: local
+  gather_facts: false
+
+  tasks:
+    - name: Create S3 bucket
+      amazon.aws.s3_bucket:
+        name: berkay-test-s3-bucket
+        state: present
+        region: eu-central-1
+        versioning: true
+        public_access:
+          block_public_acls: true
+          ignore_public_acls: true
+        tags:
+          Creator: berkayalan
+      register: s3_result
+
+    - name: Display bucket creation output
+      ansible.builtin.debug:
+        var: s3_result
