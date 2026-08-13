@@ -1,0 +1,14 @@
+- name: Delete S3 Bucket
+  hosts: localhost
+  connection: local
+  gather_facts: false
+
+  vars_files:
+    - vars.yaml
+
+  tasks:
+    - name: Delete S3 bucket
+      amazon.aws.s3_bucket:
+        name: "{{ bucket_name }}"
+        state: absent
+        force: true

@@ -5,16 +5,21 @@
   connection: local
   gather_facts: false
 
+  vars_files:
+    - vars.yaml
+
   tasks:
-    - name: Create S3 bucket
+    - name: Create bucket
       amazon.aws.s3_bucket:
-        name: berkay-test-s3-bucket
+        name: "{{ bucket_name }}"
         state: present
-        region: eu-central-1
+        region: "{{ region }}"
         versioning: true
         public_access:
           block_public_acls: true
+          block_public_policy: true
           ignore_public_acls: true
+          restrict_public_buckets: true
         tags:
           Creator: berkayalan
       register: s3_result

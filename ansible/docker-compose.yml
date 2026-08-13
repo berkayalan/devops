@@ -1,0 +1,53 @@
+version: '3.8'
+
+services:
+  ubuntu-node:
+    image: ubuntu:22.04
+    container_name: node-ubuntu
+    command: >
+      /bin/bash -c "
+      apt-get update && apt-get install -y openssh-server sudo tmux &&
+      mkdir -p /var/run/sshd &&
+      useradd -m -s /bin/bash berkay &&
+      echo 'berkay:berkayalan123' | chpasswd &&
+      echo 'berkay ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers &&
+      sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config &&
+      sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/sshd_config &&
+      /usr/sbin/sshd -D"
+    ports:
+      - "2221:22"
+    restart: unless-stopped
+
+  debian-node:
+    image: debian:12
+    container_name: node-debian
+    command: >
+      /bin/bash -c "
+      apt-get update && apt-get install -y openssh-server sudo tmux python3 &&
+      mkdir -p /var/run/sshd &&
+      useradd -m -s /bin/bash berkay &&
+      echo 'berkay:berkayalan123' | chpasswd &&
+      echo 'berkay ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers &&
+      sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config &&
+      sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/sshd_config &&
+      /usr/sbin/sshd -D"
+    ports:
+      - "2222:22"
+    restart: unless-stopped
+
+  rocky-node:
+    image: rockylinux/rockylinux:9
+    container_name: node-rocky
+    command: >
+      /bin/bash -c "
+      dnf install -y openssh-server sudo passwd tmux &&
+      ssh-keygen -A &&
+      useradd -m -s /bin/bash berkay &&
+      echo 'berkay:berkayalan123' | chpasswd &&
+      echo 'berkay ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers &&
+      sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config &&
+      sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/sshd_config &&
+      /usr/sbin/sshd -D"
+    ports:
+      - "2223:22"
+    restart: unless-stopped
