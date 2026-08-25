@@ -1,0 +1,24 @@
+---
+
+- hosts: localhost
+  connection: local
+
+  tasks:
+  - name: start EC2 instances and Add EBS
+    amazon.aws.ec2_instance:
+      name: "{{ item.name }}"
+      region: eu-central-1
+      instance_type: t2.micro
+      security_group: default
+      network:
+        assign_public_ip: true
+      image_id: "{{ item.image }}"
+      volumes:
+        - device_name: /dev/sda1
+          ebs:
+            volume_size: 16
+            delete_on_termination: true
+    loop:
+      - { image: "ami-0f60f7b735e5e576c", name: "machine-1"}
+      - { image: "ami-002da4b711811778d", name: "machine-2"}
+      - { image: "ami-0f89bfe113307ab25", name: "machine-3"}

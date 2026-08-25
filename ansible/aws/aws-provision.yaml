@@ -22,7 +22,7 @@
           restrict_public_buckets: true
         tags:
           Creator: berkayalan
-      register: s3_result
+      register: s3_result # output
 
     - name: Display bucket creation output
       ansible.builtin.debug:
